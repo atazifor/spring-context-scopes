@@ -8,9 +8,8 @@ public class Main {
     public static void main(String[] args) {
         var applicationContext = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        var c1 = applicationContext.getBean("commentService", CommentService.class);
-        var c2 = applicationContext.getBean("commentService", CommentService.class);
-        //commentService is a singleton bean, so only a single instance with name commentService is returned
-        System.out.println("c1 == c2 = " + (c1 == c2));
+        //commentService constructor is called when we load the application
+        //we don't need to use the bean
+
     }
 }
