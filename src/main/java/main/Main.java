@@ -10,7 +10,7 @@ public class Main {
 
         var c1 = applicationContext.getBean("commentService", CommentService.class);
         var c2 = applicationContext.getBean("commentService", CommentService.class);
-        //commentService is a singleton bean, so only a single instance with name commentService is returned
+        //commentService is a prototype bean, so no two instances are the same
         System.out.println("c1 == c2 = " + (c1 == c2));
     }
 }
